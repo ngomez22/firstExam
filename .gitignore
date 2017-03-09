@@ -38,4 +38,4 @@ jspm_packages
 
 # Config files
 backend/data/*
-backend/flickr/flickr.config.js
+backend/flickr/flickr-config.js
