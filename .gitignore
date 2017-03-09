@@ -37,5 +37,5 @@ jspm_packages
 .node_repl_history
 
 # Config files
-./backend/data
-./backed/flickr/flickr.js
+backend/data/*
+backend/flickr/flickr.config.js
