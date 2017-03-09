@@ -4,3 +4,6 @@ To run this project, `npm install` in both folders, and then run the backend pro
 ### Backend
 The main modifications to the backend boilerplate used can be seen in the `flickr` folder. Here, using the API and an array with all the colors of the rainbow, I made a function that makes the necesarry requests to the API and returns an object with all the colors and an array of pictures for each color. The path that server this result as a JSON is `localhost:8080/rainbow/:term`
 ### Frontend
+In the frontend project, the modifications are found in the `src` folder. Mainly, in `App.js` and inside `/components`
+#### Additional details
+- The use of cors was enabled in the backend 
