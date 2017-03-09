@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import axios from 'axios';
 import Image from './image';
 
 const URL = "http://localhost:8080/";
