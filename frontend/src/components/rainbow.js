@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Image from './image';
 
+const URL = "http://localhost:8080/";
+
 class Rainbow extends Component {
 
   render() {
@@ -11,8 +13,7 @@ class Rainbow extends Component {
         <Image />
       </div>
     )
-  }
-
+  };
 }
 
 export default Rainbow

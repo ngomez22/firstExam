@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
 import Rainbow from './components/rainbow'
@@ -8,8 +9,23 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      term: ''
+      term: '',
+      pictures: []
     };
+  }
+
+  updateTerm(newTerm) {
+    this.setState({
+      term: newTerm
+    });
+  }
+
+  getPictures() {
+    axios.get(URL+"/rainbow/" + this.props.term).then(response => {
+      this.setState({
+        pics: response.data
+      });
+    });
   }
 
   render() {
@@ -22,7 +38,9 @@ class App extends Component {
         </div>
         <div className = 'body'>
           <p>Search for a term and see a beautiful rainbow made out of Flickr images</p>
-          <input type='text' className = 'form-control'/>
+          <input type='text' className = 'form-control' onClick={(event) => {
+            this.updateState(event.target.value);
+          }}/>
         </div>
       </div>
     );
