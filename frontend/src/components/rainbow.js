@@ -1,15 +1,26 @@
 import React, {Component} from 'react';
+import Color from './color';
 import Image from './image';
-
-const URL = "http://localhost:8080/";
 
 class Rainbow extends Component {
 
+  constructor(props) {
+    super(props);
+  };
+
   render() {
     return(
-      <div>
+      <div className = "body">
         <h3>Your rainbow</h3>
-        <Image />
+        <div className="row">
+        {
+          this.props.pics.map((array, i) => {
+            return (
+              <Color key={i} pics={array} amount={this.props.amount}/>
+            )
+          })
+        }
+        </div>
       </div>
     )
   };

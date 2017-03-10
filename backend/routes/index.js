@@ -7,18 +7,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/flickr/:term', function(req, res, next) {
-  flickr.getByTerm(req.params.term, function(err, result) {
-    if(err) {
-      throw err;
-    }
-    res.json(result)
-  })
-});
-
-router.get('/load/:term', function(req, res, next) {
-  flickr.getURLByTerm(req.params.term, function(result) {
-    res.json(result)
+router.get('/:term-:color', function(req, res) {
+  flickr.getColor(req.params.term, req.params.color, function(result) {
+    res.json(result);
   })
 });
 

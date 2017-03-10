@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
 
 class Image extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div>
-        <p>Imagen</p>
+        <img src={this.props.url} />
       </div>
     )
   }
