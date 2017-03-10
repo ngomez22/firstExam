@@ -13,7 +13,7 @@ class Color extends Component {
           this.props.pics.map(function(image, index) {
             if(index<amount) {
               return (
-                <img src={image} width="90%" height="90%"/>
+                <img key={index} src={image} width="90%" height="90%"/>
               )
             }
           })
