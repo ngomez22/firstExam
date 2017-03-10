@@ -9,7 +9,8 @@ For the api to work, there should be a flickr-config.js file within the flickr f
 module.exports = {
   api_key: 'whatever',//Here goes your API key
   secret: 'supersecret' //Here goes your API secret
-} ```
+}
+```
 ### Frontend
 In the frontend project, the modifications are found in the `src` folder. Mainly, in `App.js` and inside `/components`. The main component of the frontend are `App`, `rainbow`, `color` and `image`.
 - In  `App`, I render a basic title for the website and two inputs, one binded to a search term and one binded to the amount of images to display. Here is where I make calls to the backend whenever the submit button is clicked. Lastly, an instance of the Rainbow component is rendered.
