@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import Rainbow from './components/rainbow'
 
-const URL = "http://localhost:8080/";
+const URL = "https://flickrainbowapi.herokuapp.com/";
 var rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
 
 class App extends Component {
@@ -59,18 +59,18 @@ class App extends Component {
     return (
       <div>
         <div className = 'header text-center'>
-          <h2>Flickr Rainbow</h2>
-          <h4>by Nicolás Gómez</h4>
+          <h1>Flickr Rainbow</h1>
+          <h3>by Nicolás Gómez</h3>
           <hr/>
         </div>
         <div className = 'body row'>
-          <p>Search for a term and see a beautiful rainbow made out of Flickr images</p>
-          <div className='col-xs-12'>
+          <div className='col-xs-10 col-xs-offset-1'>
+            <p>Search for a term and see a beautiful rainbow made out of Flickr images</p>
             <input type='text' placeholder='Search term' className = 'form-control' onInput={(event) => {
               this.updateTerm(event.target.value);
             }}/>
           </div>
-          <div className='col-xs-12'>
+          <div className='col-xs-10 col-xs-offset-1'>
             <br/><br/>
             <p>How many pictures would you like for each color? Currently: {this.state.amount}</p>
             <input type="range" min="1" max="100" step="1" defaultValue="10" onChange = {(event) => {
